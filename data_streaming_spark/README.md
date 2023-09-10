@@ -21,5 +21,5 @@ Este proyecto demuestra cómo utilizar Apache Spark Streaming para procesar dato
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/tuusuario/my_spark_streaming_project.git
+git clone https://github.com/brrsanchezfi/data_engineer.git
 cd my_spark_streaming_project
