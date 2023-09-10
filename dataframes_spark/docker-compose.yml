@@ -1,0 +1,18 @@
+version: '3'
+services:
+  spark-master:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:8080"  # Puerto para la interfaz web de Spark (opcional)
+      - "7077:7077"  # Puerto para el master de Spark
+
+  spark-worker:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment:
+      - SPARK_WORKER_CORES=2  
+    depends_on:
+      - spark-master
