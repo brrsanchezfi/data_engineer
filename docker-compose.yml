@@ -1,0 +1,21 @@
+version: '3'
+services:
+  spark:
+    build: .
+    container_name: mi_proyecto_spark
+    ports:
+      - "4040:4040" 
+    volumes:
+      - ./app:/app  
+    depends_on:
+      - kafka
+    command: bin/spark-submit \
+      --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2 \
+      --class tu.paquete.MainClass \
+      /app/tu-jar-de-aplicacion.jar
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: mi_proyecto_kafka
+    ports:
+      - "9092:9092"  # Puerto de Kafka
