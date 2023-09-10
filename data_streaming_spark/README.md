@@ -22,4 +22,4 @@ Este proyecto demuestra cómo utilizar Apache Spark Streaming para procesar dato
 
 ```bash
 git clone https://github.com/brrsanchezfi/data_engineer.git
-cd my_spark_streaming_project
+cd data_streaming_spark
