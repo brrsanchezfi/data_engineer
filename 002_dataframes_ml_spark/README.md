@@ -1,4 +1,4 @@
-```markdown
+
 # Modelo de Machine Learning para Predicción de Resultados de Carreras de Caballos
 
 ![Spark Logo](https://spark.apache.org/images/spark-logo.png)
